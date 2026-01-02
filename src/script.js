@@ -891,13 +891,14 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'fab fa-microsoft',
             url: 'https://www.bing.com/search?q='
         },
-        baidu: {
-            name: '百度搜索',
-            icon: 'fas fa-paw',
-            url: 'https://www.baidu.com/s?wd='
+        duckduckgo: {
+            name: 'DuckDuckGo搜索',
+            shortName: 'duckgo',
+            // DuckDuckGo 使用内联 SVG，避免依赖不存在的 Font Awesome 品牌图标
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" focusable="false"><path fill="#ff3d00" d="M44,24c0,11-9,20-20,20S4,35,4,24S13,4,24,4S44,13,44,24z"></path><path fill="#fff" d="M26,16.2c-0.6-0.6-1.5-0.9-2.5-1.1c-0.4-0.5-1-1-1.9-1.5c-1.6-0.8-3.5-1.2-5.3-0.9h-0.4 c-0.1,0-0.2,0.1-0.4,0.1c0.2,0,1,0.4,1.6,0.6c-0.3,0.2-0.8,0.2-1.1,0.4c0,0,0,0-0.1,0L15.7,14c-0.1,0.2-0.2,0.4-0.2,0.5 c1.3-0.1,3.2,0,4.6,0.4C19,15,18,15.3,17.3,15.7c-0.5,0.3-1,0.6-1.3,1.1c-1.2,1.3-1.7,3.5-1.3,5.9c0.5,2.7,2.4,11.4,3.4,16.3 l0.3,1.6c0,0,3.5,0.4,5.6,0.4c1.2,0,3.2,0.3,3.7-0.2c-0.1,0-0.6-0.6-0.8-1.1c-0.5-1-1-1.9-1.4-2.6c-1.2-2.5-2.5-5.9-1.9-8.1 c0.1-0.4,0.1-2.1,0.4-2.3c2.6-1.7,2.4-0.1,3.5-0.8c0.5-0.4,1-0.9,1.2-1.5C29.4,22.1,27.8,18,26,16.2z"></path><path fill="#fff" d="M24,42c-9.9,0-18-8.1-18-18c0-9.9,8.1-18,18-18c9.9,0,18,8.1,18,18C42,33.9,33.9,42,24,42z M24,8 C15.2,8,8,15.2,8,24s7.2,16,16,16s16-7.2,16-16S32.8,8,24,8z"></path><path fill="#0277bd" d="M19,21.1c-0.6,0-1.2,0.5-1.2,1.2c0,0.6,0.5,1.2,1.2,1.2c0.6,0,1.2-0.5,1.2-1.2 C20.1,21.7,19.6,21.1,19,21.1z M19.5,22.2c-0.2,0-0.3-0.1-0.3-0.3c0-0.2,0.1-0.3,0.3-0.3s0.3,0.1,0.3,0.3 C19.8,22.1,19.6,22.2,19.5,22.2z M26.8,20.6c-0.6,0-1,0.5-1,1c0,0.6,0.5,1,1,1c0.6,0,1-0.5,1-1S27.3,20.6,26.8,20.6z M27.2,21.5 c-0.1,0-0.3-0.1-0.3-0.3c0-0.1,0.1-0.3,0.3-0.3c0.1,0,0.3,0.1,0.3,0.3S27.4,21.5,27.2,21.5z M19.3,18.9c0,0-0.9-0.4-1.7,0.1 c-0.9,0.5-0.8,1.1-0.8,1.1s-0.5-1,0.8-1.5C18.7,18.1,19.3,18.9,19.3,18.9 M27.4,18.8c0,0-0.6-0.4-1.1-0.4c-1,0-1.3,0.5-1.3,0.5 s0.2-1.1,1.5-0.9C27.1,18.2,27.4,18.8,27.4,18.8"></path><path fill="#8bc34a" d="M23.3,35.7c0,0-4.3-2.3-4.4-1.4c-0.1,0.9,0,4.7,0.5,5s4.1-1.9,4.1-1.9L23.3,35.7z M25,35.6 c0,0,2.9-2.2,3.6-2.1c0.6,0.1,0.8,4.7,0.2,4.9c-0.6,0.2-3.9-1.2-3.9-1.2L25,35.6z"></path><path fill="#689f38" d="M22.5,35.7c0,1.5-0.2,2.1,0.4,2.3c0.6,0.1,1.9,0,2.3-0.3c0.4-0.3,0.1-2.2-0.1-2.6 C25,34.8,22.5,35.1,22.5,35.7"></path><path fill="#ffca28" d="M22.3,26.8c0.1-0.7,2-2.1,3.3-2.2c1.3-0.1,1.7-0.1,2.8-0.3c1.1-0.3,3.9-1,4.7-1.3 c0.8-0.4,4.1,0.2,1.8,1.5c-1,0.6-3.7,1.6-5.7,2.2c-1.9,0.6-3.1-0.6-3.8,0.4c-0.5,0.8-0.1,1.8,2.2,2c3.1,0.3,6.2-1.4,6.5-0.5 c0.3,0.9-2.7,2-4.6,2.1c-1.8,0-5.6-1.2-6.1-1.6C22.9,28.7,22.2,27.8,22.3,26.8"></path></svg>`,
+            url: 'https://duckduckgo.com/?q='
         }
-	    };
-
+    };
 
     // 获取DOM元素 - 基本元素
     const searchInput = document.getElementById('search');
@@ -906,8 +907,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchSections = searchResultsPage.querySelectorAll('.search-section');
 
     // 搜索引擎相关元素
-    const searchIcon = document.querySelector('.search-icon');
     const searchEngineToggle = document.querySelector('.search-engine-toggle');
+    const searchEngineToggleIcon = searchEngineToggle
+        ? searchEngineToggle.querySelector('.search-engine-icon')
+        : null;
+    const searchEngineToggleLabel = searchEngineToggle
+        ? searchEngineToggle.querySelector('.search-engine-label')
+        : null;
     const searchEngineDropdown = document.querySelector('.search-engine-dropdown');
     const searchEngineOptions = document.querySelectorAll('.search-engine-option');
 
@@ -1515,6 +1521,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 初始化搜索引擎下拉菜单事件
         const toggleEngineDropdown = () => {
+            if (!searchEngineDropdown) return;
             const next = !searchEngineDropdown.classList.contains('active');
             searchEngineDropdown.classList.toggle('active', next);
             if (searchBox) {
@@ -1525,18 +1532,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        if (searchIcon) {
-            searchIcon.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleEngineDropdown();
-            });
-        }
-
         if (searchEngineToggle) {
             searchEngineToggle.addEventListener('click', (e) => {
                 e.stopPropagation();
                 toggleEngineDropdown();
             });
+
             // 键盘可访问性：Enter/Space 触发
             searchEngineToggle.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -1574,7 +1575,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     updateSearchEngineUI();
 
                     // 关闭下拉菜单
-                    searchEngineDropdown.classList.remove('active');
+                    if (searchEngineDropdown) {
+                        searchEngineDropdown.classList.remove('active');
+                    }
                     if (searchBox) {
                         searchBox.classList.remove('dropdown-open');
                     }
@@ -1584,6 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 点击页面其他位置关闭下拉菜单
         document.addEventListener('click', () => {
+            if (!searchEngineDropdown) return;
             searchEngineDropdown.classList.remove('active');
             if (searchBox) {
                 searchBox.classList.remove('dropdown-open');
@@ -1603,23 +1607,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // 更新搜索图标以反映当前搜索引擎
-        if (searchIcon) {
-            // 清除所有类，保留基本的search-icon类
-            const classList = searchIcon.className.split(' ').filter(cls => cls === 'search-icon');
-            searchIcon.className = classList.join(' ');
+        // 更新搜索引擎按钮（方案B：前缀按钮显示当前引擎）
+        const engine = searchEngines[currentSearchEngine];
+        if (!engine) return;
+        const displayName = engine.shortName || engine.name.replace(/搜索$/, '');
 
-            // 添加当前搜索引擎的图标类
-            const engine = searchEngines[currentSearchEngine];
-            if (engine) {
-                const iconClasses = engine.icon.split(' ');
-                iconClasses.forEach(cls => {
-                    searchIcon.classList.add(cls);
-                });
-
-                // 更新标题提示
-                searchIcon.setAttribute('title', engine.name);
+        if (searchEngineToggleIcon) {
+            if (engine.iconSvg) {
+                searchEngineToggleIcon.className = 'search-engine-icon search-engine-icon-svg';
+                searchEngineToggleIcon.innerHTML = engine.iconSvg;
+            } else {
+                searchEngineToggleIcon.innerHTML = '';
+                searchEngineToggleIcon.className = `search-engine-icon ${engine.icon}`;
             }
+        }
+        if (searchEngineToggleLabel) {
+            searchEngineToggleLabel.textContent = displayName;
+        }
+        if (searchEngineToggle) {
+            searchEngineToggle.setAttribute('aria-label', `当前搜索引擎：${engine.name}，点击切换`);
         }
     }
 
